@@ -11,12 +11,13 @@ namespace LojaShokuku.Dados.Entidades
         //o entitity framework core é a tecnologia q usando c# me permite criar as bases de dados e tabelas e tudo oq fiz a bocado
         //o entitity framework core mapeia isto e mete.o automatico e chave primaria
 
+        [Display(Name = "Preço")]
         public string Nome { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public decimal Preco { get; set; }
 
-        [Display(Name = "Image")]
+        [Display(Name = "Imagem")]
         public string UrlDaImagem { get; set; }
         //este é o caminho da imagem, nao onde fica a imagem
 
