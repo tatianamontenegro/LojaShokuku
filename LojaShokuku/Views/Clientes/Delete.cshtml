@@ -1,0 +1,39 @@
+﻿@model LojaShokuku.Dados.Entidades.Clientes
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Apagar</h2>
+
+<h3>Tem a certeza que quer apagar este cliente?</h3>
+<div>
+    <h4>Clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Apelido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apelido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlDaImagem)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UrlDaImagem)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

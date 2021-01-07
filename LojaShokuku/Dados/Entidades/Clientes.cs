@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LojaShokuku.Dados.Entidades
 {
-    public class Produto
+    public class Clientes
     {
         public int Id { get; set; }
         //get; set; significa leitura e escrita
@@ -13,24 +13,11 @@ namespace LojaShokuku.Dados.Entidades
 
         public string Nome { get; set; }
 
-        [Display(Name = "Preço")]
-        [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
-        public decimal Preco { get; set; }
+        public string Apelido { get; set; }
 
         [Display(Name = "Imagem")]
         public string UrlDaImagem { get; set; }
         //este é o caminho da imagem, nao onde fica a imagem
 
-        [Display(Name = "Última Compra")]
-        public DateTime UltimaCompra { get; set; }
-
-        [Display(Name = "Última Venda")]
-        public DateTime UltimaVenda { get; set; }
-
-        [Display(Name = "Disponível")]
-        public bool Disponivel { get; set; }
-
-        [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
-        public double Stock { get; set; }
     }
 }
